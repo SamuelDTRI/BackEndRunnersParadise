@@ -4,6 +4,7 @@
         "modelo": "Men's Fresh Foam 880 V12",
         "id":1,
         "precio":"132,06",
+        "marca":"newbalance",
         "talla": ["7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11", "11.5","12"],
         "colores": ["Negro", "Blanco", "Rojo"],
         "imagen": ["https://trcmnbco.s3.amazonaws.com/M880R12_2.jpg","https://trcmnbco.s3.amazonaws.com/M880R12_1.jpg","https://trcmnbco.s3.amazonaws.com/M880R12_3.jpg","https://trcmnbco.s3.amazonaws.com/M880R12_4.jpg"]
@@ -12,6 +13,7 @@
         "modelo": "TENIS EQ19 RUN ",
         "id":2,
         "precio": "81,09",
+        "marca":"adidas",
         "talla": ["7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11", "11.5","12"],
         "colores": ["Azul", "Blanco", "Gris"],
         "imagen": ["https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/479598102fe54bdc9d94ac9200ed3096_9366/Tenis_EQ19_Run_Negro_H00924_01_standard.jpg","https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/030a2c3839434da0af77ac9200ed3e76_9366/Tenis_EQ19_Run_Negro_H00924_02_standard_hover.jpg","https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7dcf860a2bd4411f816cac9200ed4611_9366/Tenis_EQ19_Run_Negro_H00924_03_standard.jpg","https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/f0bca7313e264a09b45cac9200ed4eb2_9366/Tenis_EQ19_Run_Negro_H00924_04_standard.jpg"]
@@ -20,6 +22,7 @@
         "modelo": "Nike Air Force 1 Low Retro",
         "id":3,
         "precio":"97,47",
+        "marca":"nike",
         "talla": ["7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11", "11.5","12"],
         "colores": ["Verde", "Blanco", "Negro"],
         "imagen": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/fbe2af03-4f91-4522-8b47-4fbd41323cd1/air-force-1-low-retro-zapatillas-Wr9Chh.png","https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/81405e8c-137d-4c1f-ae01-c74054b66efa/air-force-1-low-retro-zapatillas-Wr9Chh.png","https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/64737ed9-76b6-493f-b4d3-9f94f9691b2d/air-force-1-low-retro-zapatillas-Wr9Chh.png","https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/492ccccb-4993-4a0b-aeae-80100b00821d/air-force-1-low-retro-zapatillas-Wr9Chh.png"]
@@ -28,6 +31,7 @@
         "modelo": "Jumpman Two Trey",
         "id":4,
         "precio":"74,97",
+        "marca":"nike",
         "talla": ["7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11", "11.5","12"],
         "colores": ["Naranja", "Blanco", "Negro"],
         "imagen": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/360cc5e1-a404-4a0d-b6a7-b7c415ed4282/jumpman-two-trey-zapatillas-bqMXW0.png","https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a20e2783-4670-497b-a0fe-817aacee0a64/jumpman-two-trey-zapatillas-bqMXW0.png","https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/022b906b-9413-4969-be85-6eab75d209a8/jumpman-two-trey-zapatillas-bqMXW0.png","https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/bf40a62a-d7e1-45fc-ace7-cfd4764f8b89/jumpman-two-trey-zapatillas-bqMXW0.png"]
