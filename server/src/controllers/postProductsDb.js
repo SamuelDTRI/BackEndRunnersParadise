@@ -1,31 +1,32 @@
 const axios = require("axios");
 
-const products = async (req,res) => {
-    try{
-        const response = await axios.get("http://localhost:5000/sneakers")
-        const data = response.data;
-        const result = data.map( country =>{
-            return {
-            id:country.cca3,
-            name:country.name.common,
-            image: country.flags.png,
-            continente: Array.isArray(country.continents) ? country.continents.join(", ") : country.continents,
-            capital: Array.isArray(country.capital) ? country.capital.join(", ") : (country.capital || 'Valor Predeterminado'),
-            subregion: country.subregion,
-            area: country.area,
-            poblacion: country.population,
-          }});
-        const dbCountry= await Country.bulkCreate(result)
-        console.log("se ingresaron correctamente")
-        return  res.status(200).json(dbCountry);
-    }catch(error){
-        return res.status(500).send(error.message);
-    }
-}
+const products = async (req, res) => {
+  try {
+    const response = await axios.get("http://localhost:5000/sneakers");
+    const apiSneakers = response.data;
+
+    const mappedSneakers = apiSneakers.map((sneaker) => {
+      return {
+        id: sneaker.id,
+        name: sneaker.model,
+        size: sneaker.size,
+        brand: sneaker.brand,
+        price: parseFloat(sneaker.price.replace(",", ".")),
+        colors: Array.isArray(sneaker.colors) ? sneaker.colors : [],
+        image: Array.isArray(sneaker.image) ? sneaker.image : [],
+      };
+    });
+    const dbSneakers = await Country.bulkCreate(mappedSneakers);
+    console.log("se ingresaron correctamente");
+    return res.status(200).json(dbSneakers);
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+};
 
 module.exports = {
-    paises
-}
+  products,
+};
 /*
 const cloudinary = require("cloudinary").v2
 const multer = require("multer")
