@@ -29,5 +29,6 @@ module.exports = (sequelize) => {
       public_id: STRING,
       secure_url: STRING,
     },
-  });
+  },
+  { timestamps: false,freezeTableName: true  });
 };
