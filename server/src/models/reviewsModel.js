@@ -1,3 +1,3 @@
 const { DataTypes } = require('sequelize');
-const User = sequelize.define('User', { 
+const review = sequelize.define('review', { 
     /* campos del usuario */ })
