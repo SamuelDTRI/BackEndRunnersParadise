@@ -1,17 +1,17 @@
 const { Router } = require("express");
-const {detail} = require("../controllers/getAllProducts")
-const {getById} = require ("../controllers/getDetailProduct.js")
-const router = Router();
+const productsRouter = require("./productsRouter");
+const reviewsRouter = require("./reviewsRouter");
+const usersRouter = require("./usersRouter");
 
-router.get("/", (req, res) => {
-  res.send("hola");
-});
-router.post("/upload", (req, res) => {
-  res.send("hola");
-});
+const mainRouter = Router();
 
-router.get("/all",detail )
+mainRouter.use("/products", productsRouter);
+mainRouter.use("/reviews", reviewsRouter);
+mainRouter.use("/users", usersRouter);
 
-router.get('/detail/:idKey',getById);
+// router.get("/all",detail )
+// const {detail} = require("../controllers/getAllProducts")
+// const {getById} = require ("../controllers/getDetailProduct.js")
+// router.get('/detail/:idKey',getById);
 
-module.exports = router;
+module.exports = mainRouter;
