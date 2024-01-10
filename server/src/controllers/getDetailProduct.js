@@ -1,28 +1,21 @@
 const axios = require("axios");
+const {Product} = require("../db")
 const getById = async (idKey) => {
-  const response = await axios.get(`http://localhost:5000/sneakers/`);
-  if (response.data) {
-    const responseSneakers = response.data;
-    const sneaker = responseSneakers.find(
-      (sneaker) => sneaker.id === parseInt(idKey, 10)
-    );
-    if (sneaker) {
+  const response = await Product.findByPk(idKey);
+  if (response) {   
       const result = {
-        id: sneaker.id,
-        name: sneaker.model,
-        size: sneaker.size,
-        brand: sneaker.brand,
-        price: parseFloat(sneaker.price.replace(",", ".")),
-        colors: Array.isArray(sneaker.colors) ? sneaker.colors : [],
-        image: Array.isArray(sneaker.image) ? sneaker.image : [],
+        id: response.id,
+        name: response.name,
+        size: response.size,
+        brand: response.brand,
+        price:  response.price,
+        colors: Array.isArray(response.colors) ? response.colors : [],
+        image: Array.isArray(response.image) ? response.image : [],
       };
+      console.log("op")
       return result;
-    } else {
-      return res.status(404).send(`Not Exist One Sniker With this ID${idKey}`);
-    }
-  } else {
-    return res.status(404).send("No hay data en la respuesta");
-  }
+      
+     }
 };
 
 module.exports = {

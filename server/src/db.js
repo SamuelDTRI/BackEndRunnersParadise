@@ -1,4 +1,4 @@
-require("dotenv").config(); 
+require("dotenv").config();
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env;
 const productsModel = require("./models/productsModel");
 const reviewsModel = require("./models/reviewsModel");
@@ -25,7 +25,7 @@ Review.belongsTo(Product, { foreignKey: 'productId' });
 User.hasMany(Review, { foreignKey: 'userId' });
 Review.belongsTo(User, { foreignKey: 'userId' });
 
-module.exports = { sequelize, ...sequelize.models };
+module.exports = { sequelize, Product,Review,User };
 
 
 
