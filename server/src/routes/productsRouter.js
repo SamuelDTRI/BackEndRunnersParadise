@@ -7,7 +7,7 @@ const getProductByNameHandler = require("../handlers/products/productByNameHandl
 
 const productsRouter = Router();
 
-productsRouter.get("/name/:name", getProductByNameHandler);
+productsRouter.get("/search", getProductByNameHandler);
 productsRouter.get("/", allProductsHandler);
 productsRouter.post("/create", validateProducts, postProductsHandler);
 productsRouter.get("/detail/:idKey", getProductByIdHandler);
