@@ -1,34 +1,36 @@
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
-  sequelize.define("Product", {
-    name: {
-      type: DataTypes.STRING,
-      unique: true,
-      allowNull: false,
+  sequelize.define(
+    "Product",
+    {
+      name: {
+        type: DataTypes.STRING,
+        unique: true,
+        allowNull: false,
+      },
+      id: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        primaryKey: true,
+      },
+      price: {
+        type: DataTypes.DOUBLE,
+        allowNull: false,
+      },
+      colors: {
+        type: DataTypes.ARRAY(DataTypes.STRING), // Cambie esto a un array de textos o cadenas
+        allowNull: false,
+      },
+      size: {
+        type: DataTypes.ARRAY(DataTypes.DECIMAL), // Cambie esto a un array de números decimales
+        allowNull: false,
+      },
+      image: {
+        type: DataTypes.ARRAY(DataTypes.STRING), // Cambie esto a un array de texto o cadenas
+        allowNull: false,
+      },
     },
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      autoIncrement: true,
-      primaryKey: true,
-    },
-    price: {
-      type: DataTypes.NUMBER,
-      allowNull: false,
-    },
-    colors: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    size: {
-      type: DataTypes.NUMBER,
-      allowNull: false,
-    },
-    image: {
-      public_id: STRING,
-      secure_url: STRING,
-    },
-  },
-  { timestamps: false,freezeTableName: true  });
+    { timestamps: false, freezeTableName: true }
+  );
 };

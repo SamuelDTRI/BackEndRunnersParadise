@@ -1,12 +1,21 @@
-const express = require("express");
-const { database } = require("./src/db");
+const loadDatabase = require("./loadDatabase");
+const { sequelize } = require("./src/db");
+const { Product } = require("./src/db");
 const server = require("./src/server");
-require("dotenv").config();
 
-const port = 3000;
+const PORT = 3000;
 
-database.sync({ alter: true }).then(
-  server.listen(port, () => {
-    console.log("running in port", port);
+sequelize
+  .sync({ force: true })
+  .then(async () => {
+    const allSnikers = await Product.findAll();
+    if (!allSnikers.length) {
+      loadDatabase();
+    } else {
+      console.log("Database Loaded");
+    }
+    server.listen(PORT, () => {
+      console.log(`Server listening on port ${PORT}`);
+    });
   })
-);
+  .catch((error) => console.error(error));
