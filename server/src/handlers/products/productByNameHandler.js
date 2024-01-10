@@ -2,7 +2,7 @@ const getProductByName = require("../../controllers/getProductByName");
 
 const getProductByNameHandler = async (req, res) => {
   try {
-    const { name } = req.params;
+    const { name } = req.query;
 
     if (!name) {
       return res.status(400).json({ error: "A name is required for the search." });
@@ -21,4 +21,3 @@ const getProductByNameHandler = async (req, res) => {
 };
 
 module.exports = getProductByNameHandler;
-
