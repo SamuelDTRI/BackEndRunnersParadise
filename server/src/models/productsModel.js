@@ -14,6 +14,10 @@ module.exports = (sequelize) => {
         autoIncrement: true,
         primaryKey: true,
       },
+      brand: {
+        type: DataTypes.ENUM("adidas","nike","newbalance"),
+        allowNull: false,
+      },
       price: {
         type: DataTypes.DOUBLE,
         allowNull: false,
