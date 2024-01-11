@@ -1,8 +1,8 @@
-const getProductByName = require("../../controllers/getProductByName");
+const getProductByName = require("../../controllers/products/getProductByName");
 
 const getProductByNameHandler = async (req, res) => {
   try {
-    const { name } = req.query;
+    const { name } = req.params;
 
     if (!name) {
       return res.status(400).json({ error: "A name is required for the search." });

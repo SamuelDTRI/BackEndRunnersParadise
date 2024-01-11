@@ -1,5 +1,5 @@
 const axios = require("axios");
-const { Product } = require("../db");
+const { Product } = require("../../db");
 
 const allProducts = async () => {
   const response = await Product.findAll();

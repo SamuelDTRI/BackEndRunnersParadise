@@ -14,6 +14,10 @@ module.exports = (sequelize) => {
         autoIncrement: true,
         primaryKey: true,
       },
+      brand: {
+        type: DataTypes.ENUM("adidas","nike","newbalance"),
+        allowNull: false,
+      },
       price: {
         type: DataTypes.DOUBLE,
         allowNull: false,
@@ -27,7 +31,7 @@ module.exports = (sequelize) => {
         allowNull: false,
       },
       image: {
-        type: DataTypes.ARRAY(DataTypes.STRING), // Cambie esto a un array de texto o cadenas
+        type: DataTypes.ARRAY(DataTypes.STRING), // Cambia esto a un array de texto o cadenas
         allowNull: false,
       },
     },
