@@ -1,5 +1,5 @@
 const axios = require("axios");
-const {User} = require("../db")
+const {User} = require("../../db")
 const getUserById = async (idKey) => {
   const response = await User.findByPk(idKey);
   if (response) {   

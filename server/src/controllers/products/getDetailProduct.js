@@ -1,5 +1,5 @@
 const axios = require("axios");
-const {Product} = require("../db")
+const {Product} = require("../../db")
 const getById = async (idKey) => {
   const response = await Product.findByPk(idKey);
   if (response) {   
