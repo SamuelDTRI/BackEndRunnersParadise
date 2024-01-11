@@ -1,4 +1,4 @@
-const {allUsers }= require("../../controllers/getAllUsers")
+const {allUsers }= require("../../controllers/users/getAllUsers")
 const allUsersHandler = async (req, res) => {
     try {
         const response = await allUsers()
