@@ -1,4 +1,4 @@
-const {allProducts} = require("../../controllers/getAllProducts")
+const {allProducts} = require("../../controllers/products/getAllProducts")
 
 const allProductsHandler = async (req, res) => {
   try {
