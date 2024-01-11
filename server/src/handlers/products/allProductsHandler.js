@@ -16,7 +16,7 @@ const allProductsHandler = async (req, res) => {
     if (colors) {
       response = response.filter(sneaker => sneaker.colors.includes(colors));
     }
-
+    
     if (price) {
       response.sort((a, b) => (price === 'min') ? a.price - b.price : b.price - a.price);
     }
