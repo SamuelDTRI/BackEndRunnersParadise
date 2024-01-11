@@ -27,7 +27,7 @@ module.exports = (sequelize) => {
         allowNull: false,
       },
       image: {
-        type: DataTypes.ARRAY(DataTypes.STRING), // Cambie esto a un array de texto o cadenas
+        type: DataTypes.ARRAY(DataTypes.STRING), // Cambia esto a un array de texto o cadenas
         allowNull: false,
       },
     },

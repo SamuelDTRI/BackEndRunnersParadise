@@ -20,7 +20,7 @@ const getProductByName = async (name) => {
         image: Array.isArray(sneaker.image) ? sneaker.image : [],
     }))
     
-    return results;
+    return results; 
 
 };
 
