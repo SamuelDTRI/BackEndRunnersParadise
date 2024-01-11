@@ -23,15 +23,15 @@ module.exports = (sequelize) => {
         allowNull: false,
       },
       colors: {
-        type: DataTypes.ARRAY(DataTypes.STRING), // Cambie esto a un array de textos o cadenas
+        type: DataTypes.ARRAY(DataTypes.STRING),
         allowNull: false,
       },
       size: {
-        type: DataTypes.ARRAY(DataTypes.DECIMAL), // Cambie esto a un array de números decimales
+        type: DataTypes.ARRAY(DataTypes.DECIMAL),
         allowNull: false,
       },
       image: {
-        type: DataTypes.ARRAY(DataTypes.STRING), // Cambia esto a un array de texto o cadenas
+        type: DataTypes.ARRAY(DataTypes.STRING),
         allowNull: false,
       },
     },
