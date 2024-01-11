@@ -1,4 +1,4 @@
-const {postUser} = require("../../controllers/postUsersDb")
+const {postUser} = require("../../controllers/users/postUsersDb")
 const postUsersHandler = async (req, res) => {
     const { name, surName, email, password } = req.body;
     try {
