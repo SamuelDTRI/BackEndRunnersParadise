@@ -2,7 +2,7 @@ const {allProducts} = require("../../controllers/products/getAllProducts")
 
 const allProductsHandler = async (req, res) => {
   try {
-    const { brand, size ,colors} = req.query;
+    const { brand, size, colors, price} = req.query;
     let response = await allProducts()
 
     if (brand) {
@@ -15,6 +15,10 @@ const allProductsHandler = async (req, res) => {
 
     if (colors) {
       response = response.filter(sneaker => sneaker.colors.includes(colors));
+    }
+    
+    if (price) {
+      response.sort((a, b) => (price === 'min') ? a.price - b.price : b.price - a.price);
     }
 
     res.status(200).json(response)
