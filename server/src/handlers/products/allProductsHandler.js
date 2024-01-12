@@ -2,7 +2,7 @@ const {allProducts} = require("../../controllers/products/getAllProducts")
 
 const allProductsHandler = async (req, res) => {
   try {
-    const { brand, size, colors, price} = req.query;
+    const { brand, size ,colors,price,page , pageSize  } = req.query;
     let response = await allProducts()
 
     if (brand) {
@@ -21,7 +21,11 @@ const allProductsHandler = async (req, res) => {
       response.sort((a, b) => (price === 'min') ? a.price - b.price : b.price - a.price);
     }
 
-    res.status(200).json(response)
+    const startIndex = (page-1) * pageSize;
+    const endIndex = startIndex + pageSize;
+    const paginatedResponse = response.slice(startIndex, endIndex)
+
+    res.status(200).json(paginatedResponse)
   } catch (error) {
     res.status(404).send("Not Found All Products");
   }
