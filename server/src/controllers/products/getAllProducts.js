@@ -1,6 +1,5 @@
 const axios = require("axios");
 const { Product } = require("../../db");
-
 const allProducts = async () => {
   const response = await Product.findAll();
   const mappedSneakers = response.map((sneaker) => ({
