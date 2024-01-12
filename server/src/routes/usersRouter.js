@@ -8,5 +8,4 @@ const usersRouter = Router();
 usersRouter.get("/", allUsersHandler);
 usersRouter.post("/create",validateUsers, postUsersHandler);
 usersRouter.get("/detail/:idKey", usersById);
-
 module.exports = usersRouter;
