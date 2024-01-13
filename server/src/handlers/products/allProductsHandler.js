@@ -1,4 +1,4 @@
-const {allProducts} = require("../../controllers/products/getAllProducts")
+const { allProducts } = require("../../controllers/products/getAllProducts")
 
 const allProductsHandler = async (req, res) => {
   try {
@@ -23,7 +23,7 @@ const allProductsHandler = async (req, res) => {
 
     res.status(200).json(response)
   } catch (error) {
-    res.status(404).send("Not Found All Products");
+    res.status(404).send("Failed to find all users, check your request again ...");
   }
 };
 
