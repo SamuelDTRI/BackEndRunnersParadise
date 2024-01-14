@@ -24,11 +24,11 @@ const allProductsHandler = async (req, res) => {
     const currentPage = (brand || size || colors || price) ? 1 : setCurrentPage;
     const startIndex = (setCurrentPage - 1) * pageSize;
     const endIndex = startIndex + parseInt(pageSize, 10);
-    const paginatedResponse = response.slice(startIndex, endIndex);
+    const paginatedResponse = response?.slice(startIndex, endIndex);
 
     res.status(200).json({
       paginatedResponse,
-      currentPage,
+      setCurrentPage,
       totalSneaker: response.length
     });
   } catch (error) {
