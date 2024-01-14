@@ -1,12 +1,14 @@
-const { postProduct } = require("../../controllers/products/postProductsDb");
+const { postProduct } = require('../../controllers/products/postProductsDb');
 
 const postProductsHandler = async (req, res) => {
-  const { name, size,brand, price, colors, image } = req.body;
+  const data = req.body;
+
   try {
-    const response = await postProduct(name, size, brand, price, colors, image);
+    const response = await postProduct(data);
     res.status(200).json(response);
   } catch (error) {
-    res.status(404).send("Error while creating the product, please check your information again.");
+    console.error('Error en el controlador:', error);
+    res.status(400).send({ error: error.message });
   }
 };
 
