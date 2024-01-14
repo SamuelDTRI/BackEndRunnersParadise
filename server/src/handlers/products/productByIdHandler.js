@@ -7,8 +7,7 @@ const getProductByIdHandler = async (req, res) => {
         console.log(response)
         res.status(200).json(response)
     } catch (error) {
-        
-        res.status(404).send("Not Found  Product");
+        res.status(404).send(`No product found with id: ${idKey}`);
     }
 };
 
