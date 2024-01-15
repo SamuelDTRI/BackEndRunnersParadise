@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
-  sequelize.define(
+  const Review = sequelize.define(
     "Review",
     {
       id: {
@@ -20,4 +20,5 @@ module.exports = (sequelize) => {
     },
     { timestamps: false, freezeTableName: true }
   );
+  return Review;
 };

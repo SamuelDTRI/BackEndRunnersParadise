@@ -1,39 +1,45 @@
 const { DataTypes } = require("sequelize");
 
+
 module.exports = (sequelize) => {
   sequelize.define(
     "Product",
+  
     {
+      id: {
+        type: DataTypes.STRING, // Cambiado a STRING para almacenar IDs en formato hexadecimal
+        primaryKey: true,
+        defaultValue: () => {
+          // Genera un número hexadecimal aleatorio
+          return Math.floor(Math.random() * 0xFFFFFFFFFFFFFFFF).toString(16);
+        },
+      },
       name: {
         type: DataTypes.STRING,
         unique: true,
         allowNull: false,
       },
-      id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
-        primaryKey: true,
-      },
       brand: {
-        type: DataTypes.ENUM("adidas","nike","newbalance"),
+        type: DataTypes.ENUM("adidas", "nike", "newbalance"),
         allowNull: false,
       },
       price: {
-        type: DataTypes.DOUBLE,
+        type: DataTypes.INTEGER,
         allowNull: false,
       },
       colors: {
-        type: DataTypes.ARRAY(DataTypes.STRING), // Cambie esto a un array de textos o cadenas
+        type: DataTypes.ARRAY(DataTypes.STRING),
         allowNull: false,
       },
       size: {
-        type: DataTypes.ARRAY(DataTypes.DECIMAL), // Cambie esto a un array de números decimales
+        type: DataTypes.ARRAY(DataTypes.STRING),
         allowNull: false,
       },
       image: {
-        type: DataTypes.ARRAY(DataTypes.STRING), // Cambia esto a un array de texto o cadenas
-        allowNull: false,
-      },
+        type: DataTypes.ARRAY(DataTypes.STRING),
+        allowNull: false
+       }
+       
     },
     { timestamps: false, freezeTableName: true }
   );

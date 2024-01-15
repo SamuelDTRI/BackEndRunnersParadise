@@ -1,6 +1,5 @@
 const axios = require("axios");
 const { Product } = require("../../db");
-
 const allProducts = async () => {
   const response = await Product.findAll();
   const mappedSneakers = response.map((sneaker) => ({
@@ -12,9 +11,8 @@ const allProducts = async () => {
     colors: Array.isArray(sneaker.colors) ? sneaker.colors : [],
     image: Array.isArray(sneaker.image) ? sneaker.image : [],
   }));
-  const dbSneakers = mappedSneakers;
   console.log("se ingresaron correctamente");
-  return dbSneakers;
+  return  mappedSneakers;
 };
 module.exports = {
   allProducts,

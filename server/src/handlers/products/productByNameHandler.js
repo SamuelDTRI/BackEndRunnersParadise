@@ -16,7 +16,7 @@ const getProductByNameHandler = async (req, res) => {
       return res.status(404).json({ message: "Product not found" });
     }
   } catch (error) {
-    return res.status(500).json({ error: error.message });
+    return res.status(404).send(`Product with name not found: ${this.name}`);
   }
 };
 
