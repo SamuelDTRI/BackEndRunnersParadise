@@ -15,3 +15,5 @@ productsRouter.get("/detail/:idKey", getProductByIdHandler);
 productsRouter.post("/deleteAll", deleteAllProducts);
 
 module.exports = productsRouter;
+
+//dsad
