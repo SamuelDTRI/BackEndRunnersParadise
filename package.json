@@ -2,9 +2,9 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "server": "nodemon index.js ",
+    "server": "nodemon -L src/index.js",
     "api": "echo 'Local API listening on PORT 5000' & json-server  dbinfo/db.json  5000 ",
     "start": "concurrently \"cross-env PORT=3000 npm run server\" \"cross-env PORT=5000 npm run api\""
   },
