@@ -1,7 +1,7 @@
 const loadDatabase = require("./loadDatabase");
-const { sequelize } = require("./db");
-const { Product } = require("./db");
-const server = require("./server");
+const { sequelize } = require("./src/db");
+const { Product } = require("./src/db");
+const server = require("./src/server");
 
 const PORT = 3000;
 
