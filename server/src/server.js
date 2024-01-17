@@ -9,7 +9,7 @@ const server = express();
 server.use(bodyParser.json());
 server.use(morgan("dev"));
 server.use(express.json());
-server.use(cors());
+server.use(cors("*"));
 
 server.use("/",router);
 
