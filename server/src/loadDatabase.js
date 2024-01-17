@@ -1,5 +1,5 @@
 const axios = require("axios");
-const { Product } = require("./src/db");
+const { Product } = require("./db");
 
 const loadDatabase = async () => {
   const allSnikersJson = await Product.findAll();
@@ -9,7 +9,7 @@ const loadDatabase = async () => {
       return {
         id: sneakers.id,
         name: sneakers.model,
-        size: sneakers.size, 
+        size: sneakers.size,
         brand: sneakers.brand,
         price: parseFloat(sneakers.price.replace(",", ".")),
         colors: Array.isArray(sneakers.colors) ? sneakers.colors : [],
