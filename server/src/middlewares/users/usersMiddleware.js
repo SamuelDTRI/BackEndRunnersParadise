@@ -13,7 +13,7 @@ const validateUsers = (req, res, next) => {
       .json({
         error: "Name or susrName should only contain letters and spaces",
       });
-  }
+    }
 
   const uppercasePassword = /^(?=.*[A-Z])(?=.*[@.])[a-zA-Z0-9@.]{6,12}$/;
   if (!uppercasePassword.test(password)) {

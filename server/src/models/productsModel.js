@@ -14,32 +14,37 @@ module.exports = (sequelize) => {
           return Math.floor(Math.random() * 0xFFFFFFFFFFFFFFFF).toString(16);
         },
       },
+      
       name: {
         type: DataTypes.STRING,
         unique: true,
         allowNull: false,
       },
+
       brand: {
-        type: DataTypes.ENUM("adidas", "nike", "newbalance"),
+        type: DataTypes.ENUM("ADIDAS", "NIKE", "NEW BALANCE"),
         allowNull: false,
       },
+
       price: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
+
       colors: {
         type: DataTypes.ARRAY(DataTypes.STRING),
         allowNull: false,
       },
+
       size: {
         type: DataTypes.ARRAY(DataTypes.STRING),
         allowNull: false,
       },
+      
       image: {
         type: DataTypes.ARRAY(DataTypes.STRING),
         allowNull: false
        }
-       
     },
     { timestamps: false, freezeTableName: true }
   );

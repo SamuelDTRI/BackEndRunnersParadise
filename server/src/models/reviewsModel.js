@@ -9,10 +9,12 @@ module.exports = (sequelize) => {
         primaryKey: true,
         autoIncrement: true,
       },
+
       content: {
         type: DataTypes.TEXT,
         allowNull: false,
       },
+
       rating: {
         type: DataTypes.INTEGER,
         allowNull: false,

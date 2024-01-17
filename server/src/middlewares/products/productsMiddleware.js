@@ -14,7 +14,7 @@ const validateProducts = (req, res, next) => {
  
   const nameRegex = /^[a-zA-Z0-9 ]{5,18}$/;
   const priceRegex = /^\d+(\.\d{1,2})?$/;
-  const brandRegex = /^(nike|adidas|newbalance)$/;
+  const brandRegex = /^(Nike|Adidas|New Balance)$/;
   const colorRegex = /^[a-zA-Z]{3,10}$/;
   const sizeRegex = /^\d+(\.\d{1,2})?$/;
   const imageRegex = /^.*\.(jpg|jpeg|png|gif)$/i;
