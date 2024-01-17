@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "server": "nodemon index.js",
     "api": "echo 'Local API listening on PORT 5000' & json-server  dbinfo/db.json  5000 ",
