@@ -1,5 +1,5 @@
 const axios = require("axios");
-const { Product } = require("./src/db");
+const { Product } = require("./db");
 
 const loadDatabase = async () => {
   const allSnikersJson = await Product.findAll();
