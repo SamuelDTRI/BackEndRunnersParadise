@@ -21,15 +21,16 @@ const allProductsHandler = async (req, res) => {
     if (price) {
       response.sort((a, b) => (price === 'min') ? a.price - b.price : b.price - a.price);
     }
-    const currentPage = (brand || size || colors || price) ? 1 : setCurrentPage;
+    
+
     const startIndex = (setCurrentPage - 1) * pageSize;
     const endIndex = startIndex + parseInt(pageSize, 10);
     const paginatedResponse = response?.slice(startIndex, endIndex);
-
+  
     res.status(200).json({
       paginatedResponse,
       setCurrentPage,
-      totalSneaker: response.length
+      totalSneaker: response.length,
     });
   } catch (error) {
     res.status(404).send("Not Found All Products");
