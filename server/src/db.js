@@ -1,12 +1,12 @@
 require("dotenv").config();
-const { DB_HOST, DB_NAME, DB_PASSWORD, DB_USER } = process.env;
+const { DB_HOST, DB_NAME, DB_PASSWORD, DB_USER, NODE_ENV } = process.env;
 const productsModel = require("./models/productsModel");
 const reviewsModel = require("./models/reviewsModel");
 const usersModel = require("./models/usersModel");
 const { Sequelize } = require("sequelize");
 
 let sequelize =
-  process.env.NODE_ENV === "production"
+  process.env.NODE_ENV==="production"
     ? new Sequelize({
         database: "railway",
         username: "postgres",
