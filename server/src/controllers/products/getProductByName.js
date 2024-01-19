@@ -17,7 +17,7 @@ const getProductByName = async (name) => {
         brand: sneaker.brand,
         price: sneaker.price,
         colors: Array.isArray(sneaker.colors) ? sneaker.colors : [],
-        image: Array.isArray(sneaker.image) ? sneaker.image : [],
+        image: sneaker.image
     }))
     
     return results; 
