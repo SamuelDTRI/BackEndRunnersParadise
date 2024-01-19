@@ -12,7 +12,7 @@ let sequelize =
         username: "postgres",
         password: "23G3eaB52CD3F5ED3GFA2d54Ae1C33Cc",
         host: "viaduct.proxy.rlwy.net",
-        port: 5432,
+        port: 48986,
         dialect: "postgres",
         dialectOptions: {
           ssl: {
