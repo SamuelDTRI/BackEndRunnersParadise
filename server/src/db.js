@@ -5,6 +5,10 @@ const reviewsModel = require("./models/reviewsModel");
 const usersModel = require("./models/usersModel");
 const { Sequelize } = require("sequelize");
 
+console.log(
+  `Database data:  ${DB_HOST}, ${DB_NAME}, ${DB_PASSWORD}, ${DB_USER}`
+);
+
 const sequelize = new Sequelize(
   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
   {
