@@ -9,9 +9,8 @@ let sequelize =
   process.env.NODE_ENV === "production"
     ? new Sequelize({
         database: "railway",
-        username: "postgres", 
-        password:
-          "23G3eaB52CD3F5ED3GFA2d54Ae1C33Cc",
+        username: "postgres",
+        password: "23G3eaB52CD3F5ED3GFA2d54Ae1C33Cc",
         host: "viaduct.proxy.rlwy.net",
         port: 5432,
         dialect: "postgres",
@@ -23,13 +22,12 @@ let sequelize =
         },
       })
     : new Sequelize(
-      `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
-      {
-        logging: false, // Here we are disabling the printing of log messages (in the console).
-        native: false, // Here we are choosing not to use the native driver (we have the JavaScript one).
-      }
-    );
-    
+        `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
+        {
+          logging: false, // Here we are disabling the printing of log messages (in the console).
+          native: false, // Here we are choosing not to use the native driver (we have the JavaScript one).
+        }
+      );
 
 productsModel(sequelize);
 reviewsModel(sequelize);
