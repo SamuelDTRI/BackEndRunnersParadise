@@ -6,7 +6,7 @@ const usersModel = require("./models/usersModel");
 const { Sequelize } = require("sequelize");
 
 let sequelize =
-  process.env.NODE_ENV==="production"
+  process.env.NODE_ENV === "production"
     ? new Sequelize({
         database: "railway",
         username: "postgres",
@@ -16,16 +16,18 @@ let sequelize =
         dialect: "postgres",
         dialectOptions: {
           ssl: {
-            require: true, // This will help you. But you will see nwe error
-            rejectUnauthorized: false, // This line will fix new error
+            require: true,
+            rejectUnauthorized: false,
           },
         },
+        logging: false, // Desactivar los mensajes de log
+        native: false,
       })
     : new Sequelize(
         `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
         {
-          logging: false, // Here we are disabling the printing of log messages (in the console).
-          native: false, // Here we are choosing not to use the native driver (we have the JavaScript one).
+          logging: false, // Aquí también desactivas los mensajes de log
+          native: false,
         }
       );
 
