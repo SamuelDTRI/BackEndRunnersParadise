@@ -9,5 +9,4 @@ const deleteProductsHandler = async ( req,res) => {
       }
 }
 
-
 module.exports = deleteProductsHandler;
