@@ -1,4 +1,3 @@
-const bcrypt = require('bcrypt');
 const { User } = require('../../db');
 
  const login= async (req, res) => {
@@ -7,12 +6,10 @@ const { User } = require('../../db');
  if (!user) {
     return res.status(400).send({ message: 'Usuario no existe' });
  }
- console.log(user)
+
  
  const validPassword = password === user.password;
- console.log(password)
- console.log(validPassword)
- console.log(user.password)
+ 
  if (!validPassword) {
     return res.status(400).send({ message: 'Contraseña incorrecta' });
  }
@@ -33,4 +30,3 @@ const { User } = require('../../db');
 module.exports = {
     login
 }
-
