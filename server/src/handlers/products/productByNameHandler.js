@@ -3,7 +3,8 @@ const getProductByName = require("../../controllers/products/getProductByName");
 const getProductByNameHandler = async (req, res) => {
   try {
     const { name } = req.params;
-
+    const {page , pageSize,price} = req.query
+    const setCurrentPage = (page && parseInt(page, 10) > 0) ? parseInt(page, 10) : 1;
     if (!name) {
       return res.status(400).json({ error: "A name is required for the search." });
     }

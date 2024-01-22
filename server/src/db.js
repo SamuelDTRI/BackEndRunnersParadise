@@ -6,30 +6,28 @@ const usersModel = require("./models/usersModel");
 const { Sequelize } = require("sequelize");
 
 let sequelize =
-  process.env.NODE_ENV === "production"
-    ? new Sequelize({
-        database: "railway",
-        username: "postgres",
-        password: "23G3eaB52CD3F5ED3GFA2d54Ae1C33Cc",
-        host: "viaduct.proxy.rlwy.net",
-        port: 48986,
-        dialect: "postgres",
-        dialectOptions: {
-          ssl: {
-            require: true,
-            rejectUnauthorized: false,
-          },
-        },
-        logging: false, // Desactivar los mensajes de log
-        native: false,
-      })
-    : new Sequelize(
-        `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
-        {
-          logging: false, // Aquí también desactivas los mensajes de log
-          native: false,
-        }
-      );
+  // process.env.NODE_ENV === "production"
+  //   ? new Sequelize({
+  //       database: "railway",
+  //       username: "postgres",
+  //       password: "23G3eaB52CD3F5ED3GFA2d54Ae1C33Cc",
+  //       host: "viaduct.proxy.rlwy.net",
+  //       port: 48986,
+  //       dialect: "postgres",
+  //       dialectOptions: {
+  //         ssl: {
+  //           require: true,
+  //           rejectUnauthorized: false,
+  //         },
+  //       },
+  //       logging: false, // Desactivar los mensajes de log
+  //       native: false,
+  //     })
+  //   :
+  new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`, {
+    logging: false, // Aquí también desactivas los mensajes de log
+    native: false,
+  });
 
 productsModel(sequelize);
 reviewsModel(sequelize);

@@ -15,3 +15,4 @@ productsRouter.get("/detail/:idKey", getProductByIdHandler);
 productsRouter.delete("/delete/:idKey", deleteProductsHandler);
 
 module.exports = productsRouter;
+
