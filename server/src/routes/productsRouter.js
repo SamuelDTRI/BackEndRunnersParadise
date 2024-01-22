@@ -16,4 +16,3 @@ productsRouter.post("/deleteAll", deleteAllProducts);
 
 module.exports = productsRouter;
 
-//dsad
