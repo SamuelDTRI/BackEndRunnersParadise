@@ -1,6 +1,6 @@
 const { Review } = require("../../db");
 
-const getAllReviewsController = async (req, res) => {
+const getAllReviews = async (req, res) => {
     try {
         const allReviews = await Review.findAll();
 
@@ -11,4 +11,4 @@ const getAllReviewsController = async (req, res) => {
     }
 };
 
-module.exports = getAllReviewsController;
+module.exports = getAllReviews;

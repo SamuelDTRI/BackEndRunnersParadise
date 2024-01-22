@@ -19,8 +19,8 @@ usersModel(sequelize);
 
 const { Review, Product, User  } = sequelize.models
 
+Review.belongsTo(Product, { foreignKey: 'productId', as: 'review' });
 Product.hasMany(Review, { foreignKey: 'productId', as: 'review' });
-Review.belongsTo(Product, { foreignKey: 'productId',  as: 'review' });
 
 User.hasMany(Review, { foreignKey: 'userId' });
 Review.belongsTo(User, { foreignKey: 'userId' });

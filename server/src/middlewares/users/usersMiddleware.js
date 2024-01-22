@@ -11,7 +11,7 @@ const validateUsers = (req, res, next) => {
     return res
       .status(400)
       .json({
-        error: "Name or susrName should only contain letters and spaces",
+        error: "Name or surName should only contain letters and spaces",
       });
     }
 

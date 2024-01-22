@@ -42,9 +42,9 @@ module.exports = (sequelize) => {
       },
       
       image: {
-        type: DataTypes.ARRAY(DataTypes.STRING),
-        allowNull: false
-       }
+        type: DataTypes.JSONB, 
+        allowNull: false,
+      },
     },
     { timestamps: false, freezeTableName: true }
   );

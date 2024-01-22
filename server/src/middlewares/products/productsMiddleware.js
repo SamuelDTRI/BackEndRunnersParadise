@@ -3,54 +3,23 @@ const validator = require('validator');
 
 
 const validateProducts = (req, res, next) => {
-  const { name, size, brand, price, colors, image } = req.body;
+  const { name, size,brand, price, colors, image } = req.body;
+
+
+  const nameRegex = /^[a-zA-Z0-9 ]{5,18}$/; //  letras numeros y espacios entre 5 a 18
+  const priceRegex = /^\d+(\.\d{1,2})?$/ ;//  numeros con hasta dos decimales
+  const brandRegex = /^(nike|adidas|newbalance)$/; //  numeros con hasta dos decimales
+  const colorRegex = /^[a-zA-Z]{3,10}$/; //  letras con tamaño de 3 a 10
+  const sizeRegex = /^\d+(\.\d{1,2})?$/; //  numeros con hasta dos decimales
+  //  imagenes con extensiones jpg, jpeg, png o gif :))
+
+  if (!name || !nameRegex.test(name)) return res.status(400).json({ error: "Invalid or Missing Name" });
+  if (!size || !size.every(s => sizeRegex.test(s))) return res.status(400).json({ error: "Invalid or Missing Size" });
+  if (!brandRegex.test(brand.toLowerCase())) {return res.status(400).json({ error: "Invalid brand" });}
+  if (!price || !priceRegex.test(price)) return res.status(400).json({ error: "Invalid or Missing Price" });
+  if (!colors || !colors.every(c => colorRegex.test(c))) return res.status(400).json({ error: "Invalid or Missing Colors" });
  
-  console.log('Name:', name);
-  console.log('Size:', size);
-  console.log('Brand:', brand);
-  console.log('Price:', price);
-  console.log('Colors:', colors);
-  console.log('Image:', image);
- 
-  const nameRegex = /^[a-zA-Z0-9 ]{5,18}$/;
-  const priceRegex = /^\d+(\.\d{1,2})?$/;
-  const brandRegex = /^(Nike|Adidas|New Balance)$/;
-  const colorRegex = /^[a-zA-Z]{3,10}$/;
-  const sizeRegex = /^\d+(\.\d{1,2})?$/;
-  const imageRegex = /^.*\.(jpg|jpeg|png|gif)$/i;
- 
-  if (!name || (typeof name !== 'string') || !nameRegex.test(name)) {
-    console.log('Validation failed for name')
-    return res.status(400).json({ error: "Invalid or Missing Name" });
-  }
- 
-  if (!size || !Array.isArray(size) || !size.every(s => sizeRegex.test(s))) {
-    console.log('Validation failed for size')
-    return res.status(400).json({ error: "Invalid or Missing Size" });
-  }
- 
-  if (!brand || (typeof brand !== 'string') || !brandRegex.test(brand.toLowerCase())) {
-    console.log('Validation failed for brand')
-    return res.status(400).json({ error: "Invalid brand" });
-  }
- 
-  if (!price || !priceRegex.test(price)) {
-    console.log('Validation failed for price')
-    return res.status(400).json({ error: "Invalid or Missing Price" });
-  }
- 
-  if (!colors || !Array.isArray(colors) || !colors.every(c => typeof c === 'string' && colorRegex.test(c))) {
-    console.log('Validation failed for color')
-    return res.status(400).json({ error: "Invalid or Missing Colors" });
-  }
- 
-  if (!image || !Array.isArray(image) || image.length === 0 || !image.every(img => validator.isURL(img))) {
-    console.log('Validation failed for image');
-    return res.status(400).json({ error: "Invalid or Missing Image" });
-  }
-  req.body.size = size.map(s => String(s)); // Convertir los tamaños a números
-  req.body.colors = colors; // Utilizar directamente el array de colores
- 
+
   next();
  }
  
