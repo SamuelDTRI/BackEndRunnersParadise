@@ -9,9 +9,5 @@ mainRouter.use("/products", productsRouter);
 mainRouter.use("/reviews", reviewsRouter);
 mainRouter.use("/users", usersRouter);
 
-// router.get("/all",detail )
-// const {detail} = require("../controllers/getAllProducts")
-// const {getById} = require ("../controllers/getDetailProduct.js")
-// router.get('/detail/:idKey',getById);
 
 module.exports = mainRouter;
