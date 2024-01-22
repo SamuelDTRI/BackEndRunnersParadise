@@ -23,13 +23,11 @@ let sequelize =
         logging: false, // Desactivar los mensajes de log
         native: false,
       })
-    : new Sequelize(
-        `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
-        {
-          logging: false, // Aquí también desactivas los mensajes de log
-          native: false,
-        }
-      );
+    :
+  new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`, {
+    logging: false, // Aquí también desactivas los mensajes de log
+    native: false,
+  });
 
 productsModel(sequelize);
 reviewsModel(sequelize);
