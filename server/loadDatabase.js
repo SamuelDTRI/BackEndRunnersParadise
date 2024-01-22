@@ -13,7 +13,7 @@ const loadDatabase = async () => {
         brand: sneakers.brand,
         price: parseFloat(sneakers.price.replace(",", ".")),
         colors: Array.isArray(sneakers.colors) ? sneakers.colors : [],
-        image: Array.isArray(sneakers.image) ? sneakers.image : [],
+        image: sneakers.image
       };
     });
     await Product.bulkCreate(jsonSnikers);

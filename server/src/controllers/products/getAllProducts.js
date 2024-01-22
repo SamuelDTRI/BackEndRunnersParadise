@@ -9,7 +9,7 @@ const allProducts = async () => {
     brand: sneaker.brand,
     price: sneaker.price,
     colors: Array.isArray(sneaker.colors) ? sneaker.colors : [],
-    image: Array.isArray(sneaker.image) ? sneaker.image : [],
+    image: sneaker.image
   }));
   console.log("se ingresaron correctamente");
   return  mappedSneakers;

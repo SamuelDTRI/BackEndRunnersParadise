@@ -41,7 +41,11 @@
         "price": "69,97",
         "brand":"nike",
         "size": ["8", "8.5", "9", "10"],
-        "colors": ["https://static.nike.com/a/images/t_PDP_144_v1/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/07f289b9-7ca1-49ec-a347-b69b95e17032/air-jordan-1-low-se-zapatillas-Z8CHrq.png",  "https://static.nike.com/a/images/t_PDP_144_v1/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/15aba2af-36a6-449c-a9a8-aeb373c035d9/air-jordan-1-low-se-zapatillas-Z8CHrq.png",  "https://static.nike.com/a/images/t_PDP_144_v1/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/ef66458b-6949-44e7-a35e-21818fc5d1e1/air-jordan-1-low-se-zapatillas-Z8CHrq.png"],
+        "colors": [
+          "black","https://static.nike.com/a/images/t_PDP_144_v1/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/07f289b9-7ca1-49ec-a347-b69b95e17032/air-jordan-1-low-se-zapatillas-Z8CHrq.png",
+          "red" ,"https://static.nike.com/a/images/t_PDP_144_v1/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/15aba2af-36a6-449c-a9a8-aeb373c035d9/air-jordan-1-low-se-zapatillas-Z8CHrq.png", 
+          "orange", "https://static.nike.com/a/images/t_PDP_144_v1/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/ef66458b-6949-44e7-a35e-21818fc5d1e1/air-jordan-1-low-se-zapatillas-Z8CHrq.png"
+        ],
         "image": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/8d7704ed-3fbc-4cd8-a19c-c7fe3c628371/air-jordan-1-low-se-zapatillas-Z8CHrq.png"]
       },  {
         "model": "Jordan Stay Loyal 2 ",

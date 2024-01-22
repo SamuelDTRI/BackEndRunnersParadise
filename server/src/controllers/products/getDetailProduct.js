@@ -14,7 +14,7 @@ const getById = async (idKey) => {
       brand: response.brand,
       price: response.price,
       colors: Array.isArray(response.colors) ? response.colors : [],
-      image: Array.isArray(response.image) ? response.image : [],
+      image: response.image,
       reviews: reviews.map(rew => ({
         id: rew.id,
         content: rew.content,
