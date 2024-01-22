@@ -13,7 +13,7 @@ const validateProducts = (req, res, next) => {
   if (!brandRegex.test(brand.toLowerCase())) {return res.status(400).json({ error: "Invalid brand" });}
   if (!price || !priceRegex.test(price)) return res.status(400).json({ error: "Invalid or Missing Price" });
   if (!colors || !colors.every(c => colorRegex.test(c))) return res.status(400).json({ error: "Invalid or Missing Colors" });
-
+ 
 
   next();
 };
