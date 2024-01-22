@@ -1,12 +1,9 @@
-const validator = require('validator');
-
-
-
 const validateProducts = (req, res, next) => {
-  const { name, size, brand, price, colors, image } = req.body;
+  const { name, size,brand, price, colors, image } = req.body;
+
 
   const nameRegex = /^[a-zA-Z0-9 ]{5,18}$/; //  letras numeros y espacios entre 5 a 18
-  const priceRegex = /^\d{1,4}$/; //  numeros con hasta dos decimales
+  const priceRegex = /^\d+(\.\d{1,2})?$/ ;//  numeros con hasta dos decimales
   const brandRegex = /^(nike|adidas|newbalance)$/; //  numeros con hasta dos decimales
   const colorRegex = /^[a-zA-Z]{3,10}$/; //  letras con tamaño de 3 a 10
   const sizeRegex = /^\d+(\.\d{1,2})?$/; //  numeros con hasta dos decimales
@@ -19,6 +16,7 @@ const validateProducts = (req, res, next) => {
   if (!colors || !colors.every(c => colorRegex.test(c))) return res.status(400).json({ error: "Invalid or Missing Colors" });
  
 
-}
+  next();
+};
 
 module.exports = validateProducts;

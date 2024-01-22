@@ -20,21 +20,3 @@ const postProduct = async (name, size,brand, price, colors,req,image) => {
 };
 
 module.exports = { postProduct };
-
-
-
-const deleteAllProducts = async () => {
- try {
-   // Primero, truncamos la tabla Review
-   await Review.destroy({ truncate: true, cascade: true });
-   // Luego, truncamos la tabla Product
-   await Product.destroy({ truncate: true, cascade: true });
-   console.log('All products and reviews deleted successfully!');
- } catch (error) {
-   console.error('Error while deleting all products and reviews:', error);
- }
-};
-
-module.exports = { postProduct, deleteAllProducts };
- 
- module.exports = { postProduct, deleteAllProducts };
