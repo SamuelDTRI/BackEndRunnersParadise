@@ -6,7 +6,7 @@ const server = require("./src/server");
 const PORT = 3000;
 
 sequelize
-  .sync({ alter: true })
+  .sync({ force : true })
   .then(async () => {
     const allSnikers = await Product.findAll();
     if (!allSnikers.length) {
