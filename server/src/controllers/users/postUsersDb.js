@@ -34,7 +34,7 @@ const sendEmail = async (name, surName, email) => {
 
   try {
     const message = {
-      from: "sariditri31@gmail.com",
+      from: "runnersparadisecompany@gmail.com",
       to: email,
       subject: "¡Bienvenido a Runners Paradise!",
       html: `
