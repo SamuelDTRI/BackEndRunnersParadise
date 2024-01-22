@@ -1,3 +1,7 @@
+const validator = require('validator');
+
+
+
 const validateProducts = (req, res, next) => {
   const { name, size, brand, price, colors, image } = req.body;
 
