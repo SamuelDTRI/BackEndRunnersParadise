@@ -31,6 +31,7 @@ let sequelize =
         }
       );
 
+
 productsModel(sequelize);
 reviewsModel(sequelize);
 usersModel(sequelize);
