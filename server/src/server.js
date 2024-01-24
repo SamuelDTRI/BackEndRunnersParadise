@@ -2,15 +2,20 @@ const express = require("express");
 const router = require("./routes");
 const morgan = require("morgan");
 const cors = require("cors");
-const bodyParser = require("body-parser");
 const fileUpload = require("express-fileupload");
 
 const server = express();
-
-server.use(express.json());
 server.use(morgan("dev"));
 server.use(express.json());
-server.use(cors());
+const corsOptions = {
+  origin: '*',  
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',  
+  preflightContinue: false,
+  optionsSuccessStatus: 204
+}
+
+server.use(cors(corsOptions));
+
 server.use(
   fileUpload({
     useTempFiles: true,
