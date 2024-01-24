@@ -1,7 +1,3 @@
-const validator = require('validator');
-
-
-
 const validateProducts = (req, res, next) => {
   const { name, size, brand, price, colors, image } = req.body;
 
@@ -12,13 +8,19 @@ const validateProducts = (req, res, next) => {
   const sizeRegex = /^\d+(\.\d{1,2})?$/; //  numeros con hasta dos decimales
   //  imagenes con extensiones jpg, jpeg, png o gif :))
 
-  if (!name || !nameRegex.test(name)) return res.status(400).json({ error: "Invalid or Missing Name" });
-  if (!size || !size.every(s => sizeRegex.test(s))) return res.status(400).json({ error: "Invalid or Missing Size" });
-  if (!brandRegex.test(brand.toLowerCase())) {return res.status(400).json({ error: "Invalid brand" });}
-  if (!price || !priceRegex.test(price)) return res.status(400).json({ error: "Invalid or Missing Price" });
-  if (!colors || !colors.every(c => colorRegex.test(c))) return res.status(400).json({ error: "Invalid or Missing Colors" });
- 
+  if (!name || !nameRegex.test(name))
+    return res.status(400).json({ error: "Invalid or Missing Name" });
+  if (!size || !size.every((s) => sizeRegex.test(s)))
+    return res.status(400).json({ error: "Invalid or Missing Size" });
+  if (!brandRegex.test(brand.toLowerCase())) {
+    return res.status(400).json({ error: "Invalid brand" });
+  }
+  if (!price || !priceRegex.test(price))
+    return res.status(400).json({ error: "Invalid or Missing Price" });
+  if (!colors || !colors.every((c) => colorRegex.test(c)))
+    return res.status(400).json({ error: "Invalid or Missing Colors" });
 
-}
+  next();
+};
 
 module.exports = validateProducts;

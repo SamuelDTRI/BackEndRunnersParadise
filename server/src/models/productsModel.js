@@ -1,18 +1,13 @@
 const { DataTypes } = require("sequelize");
 
-
 module.exports = (sequelize) => {
   sequelize.define(
     "Product",
-  
     {
       id: {
-        type: DataTypes.STRING, // Cambiado a STRING para almacenar IDs en formato hexadecimal
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
         primaryKey: true,
-        defaultValue: () => {
-          // Genera un número hexadecimal aleatorio
-          return Math.floor(Math.random() * 0xFFFFFFFFFFFFFFFF).toString(16);
-        },
       },
       name: {
         type: DataTypes.STRING,
@@ -36,7 +31,7 @@ module.exports = (sequelize) => {
         allowNull: false,
       },
       image: {
-        type: DataTypes.JSONB, 
+        type: DataTypes.JSONB,
         allowNull: false,
       },
     },
