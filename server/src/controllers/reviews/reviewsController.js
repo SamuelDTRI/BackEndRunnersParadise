@@ -5,26 +5,23 @@ const { Review } = require("../../db");
 const postReviews = async (req, res) => {
   try {
     // Extraer datos de la URL y el cuerpo de la solicitud
-    const { idKey, userId } = req.params;
-    const { content, rating } = req.body;
-    console.log("esto viene de controlleer reviews", idKey, userId, content, rating)
+    const { idKey } = req.params;
+    const { content, rating, name, profileImage } = req.body;
+    console.log("esto viene de controlleer reviews", idKey, content, rating, profileImage)
 
     // Verifica que los datos necesarios estén presentes
-    if (!idKey || !userId || !content || !rating) {
+    if (!idKey || !content || !rating || !name || !profileImage) {
       return res.status(400).json({ error: 'Todos los campos son obligatorios.' });
     }
 
-    // Realiza operaciones con los datos, por ejemplo, crea una nueva revisión
     const review = await Review.create({
       content,
       rating,
-      userId,
+      name,
+      profileImage,
       productId: idKey,
     });
 
-    // Puedes realizar otras operaciones según tus necesidades, por ejemplo, actualizar productos, usuarios, etc.
-
-    // Envía una respuesta al cliente
     res.status(201).json({ success: true, review });
   } catch (error) {
     console.error('Error al procesar la revisión:', error);
@@ -36,7 +33,6 @@ const getReviewsByProduct = async (req, res) => {
   try {
     const { idKey } = req.params;
 
-    // Obtener revisiones específicas de un producto
     const reviews = await Review.findAll({
       where: { productId: idKey },
     });

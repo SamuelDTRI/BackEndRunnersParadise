@@ -6,7 +6,7 @@
         "price":"132,06",
         "brand":"NEW BALANCE",
         "size": ["7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11", "11.5","12"],
-        "colors": ["black", "white", "red"],
+        "colors": ["Black", "White", "Red"],
         "image": ["https://trcmnbco.s3.amazonaws.com/M880R12_2.jpg", "https://trcmnbco.s3.amazonaws.com/M880R12_1.jpg",  "https://trcmnbco.s3.amazonaws.com/M880R12_3.jpg",  "https://trcmnbco.s3.amazonaws.com/M880R12_4.jpg"]
       },
       {
@@ -15,7 +15,7 @@
         "price": "81,09",
         "brand":"ADIDAS",
         "size": ["7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11", "11.5","12"],
-        "colors": ["blue", "white", "grey"],
+        "colors": ["Blue", "White", "Grey"],
         "image": ["https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/479598102fe54bdc9d94ac9200ed3096_9366/Tenis_EQ19_Run_Negro_H00924_01_standard.jpg",  "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/030a2c3839434da0af77ac9200ed3e76_9366/Tenis_EQ19_Run_Negro_H00924_02_standard_hover.jpg",  "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7dcf860a2bd4411f816cac9200ed4611_9366/Tenis_EQ19_Run_Negro_H00924_03_standard.jpg",  "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/f0bca7313e264a09b45cac9200ed4eb2_9366/Tenis_EQ19_Run_Negro_H00924_04_standard.jpg"]
       },
       {
@@ -24,7 +24,7 @@
         "price":"97,47",
         "brand":"NIKE",
         "size": ["7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11", "11.5","12"],
-        "colors": ["green", "white", "black"],
+        "colors": ["Green", "White", "Black"],
         "image": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/fbe2af03-4f91-4522-8b47-4fbd41323cd1/air-force-1-low-retro-zapatillas-Wr9Chh.png",  "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/81405e8c-137d-4c1f-ae01-c74054b66efa/air-force-1-low-retro-zapatillas-Wr9Chh.png",  "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/64737ed9-76b6-493f-b4d3-9f94f9691b2d/air-force-1-low-retro-zapatillas-Wr9Chh.png",  "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/492ccccb-4993-4a0b-aeae-80100b00821d/air-force-1-low-retro-zapatillas-Wr9Chh.png"]
       },
       {
@@ -33,7 +33,7 @@
         "price":"74,97",
         "brand":"NIKE",
         "size": ["7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11", "11.5","12"],
-        "colors": ["orange", "white", "black"],
+        "colors": ["Orange", "White", "Black"],
         "image": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/360cc5e1-a404-4a0d-b6a7-b7c415ed4282/jumpman-two-trey-zapatillas-bqMXW0.png",  "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a20e2783-4670-497b-a0fe-817aacee0a64/jumpman-two-trey-zapatillas-bqMXW0.png",  "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/022b906b-9413-4969-be85-6eab75d209a8/jumpman-two-trey-zapatillas-bqMXW0.png",  "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/bf40a62a-d7e1-45fc-ace7-cfd4764f8b89/jumpman-two-trey-zapatillas-bqMXW0.png"]
       },  {
         "model": " Air Jordan 1 Low SE ",
@@ -42,9 +42,9 @@
         "brand":"NIKE",
         "size": ["8", "8.5", "9", "10"],
         "colors": [
-          "black","https://static.nike.com/a/images/t_PDP_144_v1/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/07f289b9-7ca1-49ec-a347-b69b95e17032/air-jordan-1-low-se-zapatillas-Z8CHrq.png",
-          "red" ,"https://static.nike.com/a/images/t_PDP_144_v1/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/15aba2af-36a6-449c-a9a8-aeb373c035d9/air-jordan-1-low-se-zapatillas-Z8CHrq.png", 
-          "orange", "https://static.nike.com/a/images/t_PDP_144_v1/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/ef66458b-6949-44e7-a35e-21818fc5d1e1/air-jordan-1-low-se-zapatillas-Z8CHrq.png"
+          "Black","https://static.nike.com/a/images/t_PDP_144_v1/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/07f289b9-7ca1-49ec-a347-b69b95e17032/air-jordan-1-low-se-zapatillas-Z8CHrq.png",
+          "Red" ,"https://static.nike.com/a/images/t_PDP_144_v1/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/15aba2af-36a6-449c-a9a8-aeb373c035d9/air-jordan-1-low-se-zapatillas-Z8CHrq.png", 
+          "Orange", "https://static.nike.com/a/images/t_PDP_144_v1/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/ef66458b-6949-44e7-a35e-21818fc5d1e1/air-jordan-1-low-se-zapatillas-Z8CHrq.png"
         ],
         "image": ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/8d7704ed-3fbc-4cd8-a19c-c7fe3c628371/air-jordan-1-low-se-zapatillas-Z8CHrq.png"]
       },  {

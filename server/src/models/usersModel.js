@@ -11,6 +11,11 @@ module.exports = (sequelize) => {
         autoIncrement: true,
       },
 
+      googleId: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+
       name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -29,7 +34,7 @@ module.exports = (sequelize) => {
 
       password: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       },
     },
     { timestamps: false, freezeTableName: true }

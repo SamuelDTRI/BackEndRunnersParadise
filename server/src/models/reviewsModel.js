@@ -10,19 +10,24 @@ module.exports = (sequelize) => {
         autoIncrement: true,
       },
 
-      userId: {
-        type: DataTypes.INTEGER, // Ajusta el tipo de datos según cómo almacenas userId en tu base de datos
+      name: {
+        type: DataTypes.STRING,
         allowNull: false,
       },
 
       productId: {
-        type: DataTypes.STRING, // Ajusta el tipo de datos según cómo almacenas idKey en tu base de datos
+        type: DataTypes.STRING,
         allowNull: false,
       },
 
       content: {
         type: DataTypes.TEXT,
         allowNull: false,
+      },
+
+      profileImage: {
+        type: DataTypes.STRING,
+        allowNull: true,
       },
 
       rating: {
