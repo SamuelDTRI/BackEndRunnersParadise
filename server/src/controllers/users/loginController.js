@@ -22,7 +22,10 @@ const { User } = require('../../db');
       id:user.id,
       name:user.name,
       surName:user.surName,
-      email:user.email
+      email:user.email,
+      phone:user.phone,
+      address:user.address,
+      country:user.country,
    }
    return res.json(response);
  }

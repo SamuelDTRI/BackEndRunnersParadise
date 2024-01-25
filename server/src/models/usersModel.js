@@ -30,8 +30,30 @@ module.exports = (sequelize) => {
 
       password: {
         type: DataTypes.STRING,
+        allowNull: false,
+      },
+
+      country : {
+        type: DataTypes.STRING,
+        allowNull: true
+      },
+
+      phone : {
+        type: DataTypes.STRING,
+        allowNull: true
+      },
+
+      address : {
+        type: DataTypes.STRING,
+        allowNull: true
+      },
+
+      profilePicture: {
+        type: DataTypes.BLOB,
         allowNull: true,
       },
+     
+
     },
     { timestamps: false, freezeTableName: true }
   );
