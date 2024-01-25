@@ -11,10 +11,6 @@ module.exports = (sequelize) => {
         autoIncrement: true,
       },
 
-      googleId: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
 
       name: {
         type: DataTypes.STRING,
