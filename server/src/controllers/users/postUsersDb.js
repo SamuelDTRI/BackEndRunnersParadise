@@ -1,11 +1,11 @@
-const { User } = require("../../db");
+const { User, Cart } = require("../../db");
 const nodemailer = require("nodemailer");
 
 const postUser = async (name, surName, email, password) => {
   try {
     const maxId = await User.max("id");
     const newId = maxId + 1;
-    const postInDb = await User.create({
+    const user = await User.create({
       id: newId,
       name,
       surName,
@@ -13,9 +13,11 @@ const postUser = async (name, surName, email, password) => {
       password,
     });
 
+    const cart = await Cart.create({ userId: user.id });
+
     await sendEmail(name, surName, email);
 
-    return postInDb;
+    return user;
   } catch (error) {
     console.error("Error al registrar usuario:", error);
     throw error;

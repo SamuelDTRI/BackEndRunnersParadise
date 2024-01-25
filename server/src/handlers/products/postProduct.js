@@ -7,7 +7,7 @@ const postProductsHandler = async (req, res) => {
     console.log(response);
     res.status(201).json(response);
   } catch (error) {
-    res.status(404).json("Error while creating the product, please check your information again.");
+    res.status(404).json({ error: error.message });
   }
 };
 

@@ -20,6 +20,7 @@ const validateProducts = (req, res, next) => {
   if (!colors || !colors.every((c) => colorRegex.test(c)))
     return res.status(400).json({ error: "Invalid or Missing Colors" });
 
+  console.log("processing this data:", name, size, brand, price, colors, image);
   next();
 };
 
