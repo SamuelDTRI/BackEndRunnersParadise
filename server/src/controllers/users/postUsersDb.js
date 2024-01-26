@@ -1,9 +1,9 @@
 const { User } = require("../../db");
+const { v4: uuidv4 } = require('uuid');
 
 const postUser = async (name, surName, email, password) => {
-    const maxId = await User.max('id');
-    const newId = maxId + 1;
-  const postInDb = await User.create({ id:newId, name, surName, email, password });
+  const uuid = uuidv4();
+  const postInDb = await User.create({ id: uuid, name, surName, email, password });
   return postInDb;
 };
 
