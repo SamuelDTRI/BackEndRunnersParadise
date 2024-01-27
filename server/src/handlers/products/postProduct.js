@@ -4,10 +4,10 @@ const postProductsHandler = async (req, res) => {
   const { name, size,brand, price, colors ,image} = req.body;
   try {
     const response = await postProduct(name, size, brand, price, colors,req,image);
-    res.status(200).json(response);
+    console.log(response);
+    res.status(201).json(response);
   } catch (error) {
-    console.error('Error en el controlador:', error);
-    res.status(400).send({ error: error.message });
+    res.status(404).json({ error: error.message });
   }
 };
 

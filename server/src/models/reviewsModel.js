@@ -1,3 +1,4 @@
+// reviews.js
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
@@ -16,7 +17,7 @@ module.exports = (sequelize) => {
       },
 
       productId: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER, 
         allowNull: false,
       },
 
