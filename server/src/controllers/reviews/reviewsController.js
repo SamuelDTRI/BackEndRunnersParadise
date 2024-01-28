@@ -1,15 +1,12 @@
-// reviewsController.js
 
 const { Review } = require("../../db");
 
 const postReviews = async (req, res) => {
   try {
-    // Extraer datos de la URL y el cuerpo de la solicitud
     const { idKey } = req.params;
     const { content, rating, name, profileImage } = req.body;
     console.log("esto viene de controlleer reviews", idKey, content, rating, profileImage)
 
-    // Verifica que los datos necesarios estén presentes
     if (!idKey || !content || !rating || !name || !profileImage) {
       return res.status(400).json({ error: 'Todos los campos son obligatorios.' });
     }

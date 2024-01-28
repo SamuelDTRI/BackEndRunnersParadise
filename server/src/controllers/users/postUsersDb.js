@@ -1,7 +1,7 @@
 const { User, Cart } = require("../../db");
 const nodemailer = require("nodemailer");
 
-const postUser = async (name, surName, email, password, role) => {
+const postUser = async (name, surName, email, password, rol) => {
   try {
     const maxId = await User.max("id");
     const newId = maxId + 1;
@@ -11,7 +11,7 @@ const postUser = async (name, surName, email, password, role) => {
       surName,
       email,
       password,
-      role
+      rol
     });
 
     const cart = await Cart.create({ userId: user.id });
