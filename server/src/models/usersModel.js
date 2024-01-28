@@ -48,6 +48,12 @@ module.exports = (sequelize) => {
         type: DataTypes.BLOB,
         allowNull: true,
       },
+
+      rol: {
+        type: DataTypes.ENUM("admin", "seller", "buyer"),
+        allowNull: false,
+        defaultValue: "buyer", 
+      },
      
 
     },
