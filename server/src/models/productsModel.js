@@ -20,7 +20,7 @@ module.exports = (sequelize) => {
         primaryKey: true,
       },
       brand: {
-        type: DataTypes.ENUM('ADIDAS', 'NIKE', 'NEW BALANCE'),
+        type: DataTypes.ENUM('ADIDAS', 'NIKE', 'NEWBALANCE'),
         allowNull: false,
       },
       price: {
