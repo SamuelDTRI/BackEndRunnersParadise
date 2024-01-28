@@ -4,22 +4,22 @@ module.exports = (sequelize) => {
   sequelize.define(
     "Product",
     {
-      name: {
-        type: DataTypes.STRING,
-        unique: true,
-        allowNull: false,
-      },
       id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
       },
+      name: {
+        type: DataTypes.STRING,
+        unique: true,
+        allowNull: false,
+      },
       brand: {
-        type: DataTypes.ENUM("adidas","nike","newbalance"),
+        type: DataTypes.ENUM("adidas", "nike", "newbalance"),
         allowNull: false,
       },
       price: {
-        type: DataTypes.DOUBLE,
+        type: DataTypes.INTEGER,
         allowNull: false,
       },
       colors: {
@@ -27,11 +27,11 @@ module.exports = (sequelize) => {
         allowNull: false,
       },
       size: {
-        type: DataTypes.ARRAY(DataTypes.DECIMAL),
+        type: DataTypes.ARRAY(DataTypes.STRING),
         allowNull: false,
       },
       image: {
-        type: DataTypes.JSONB, 
+        type: DataTypes.JSONB,
         allowNull: false,
       },
     },
