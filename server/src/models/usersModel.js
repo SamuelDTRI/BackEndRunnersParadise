@@ -49,8 +49,8 @@ module.exports = (sequelize) => {
         allowNull: true,
       },
 
-      rol: {
-        type: DataTypes.ENUM("admin", "seller", "buyer"),
+      admin: {
+        type: DataTypes.BOOLEAN,
         allowNull: false, 
       },
      

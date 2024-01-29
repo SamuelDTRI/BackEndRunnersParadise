@@ -9,7 +9,7 @@ const allUsers = async () => {
     surName: user.surName,
     email: user.email,
     password: user.password,
-    rol: user.rol
+    admin: user.admin
   }));
   console.log("testing");
   return mappedSneakers;
