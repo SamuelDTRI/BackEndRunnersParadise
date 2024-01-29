@@ -11,18 +11,9 @@ const getProductByNameHandler = async (req, res) => {
 
     const productsFound = await getProductByName(name);
 
-    if (price) {
-      productsFound.sort((a, b) => (price === 'min') ? a.price - b.price : b.price - a.price);
-    }
-    
-    const startIndex = (setCurrentPage - 1) * pageSize;
-    const endIndex = startIndex + parseInt(pageSize, 10);
-    const paginatedResponse = productsFound?.slice(startIndex, endIndex);
-  
-    if (paginatedResponse) {
+    if (productsFound.length > 0) {
       return res.status(200).json({
-        paginatedResponse ,
-        setCurrentPage,
+        productsFound :productsFound ,
         totalSneakers : productsFound.length
       });
     } else {

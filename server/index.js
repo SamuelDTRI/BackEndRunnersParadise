@@ -1,21 +1,9 @@
-const loadDatabase = require("./loadDatabase");
+require("dotenv").config();
 const { sequelize } = require("./src/db");
-const { Product } = require("./src/db");
 const server = require("./src/server");
 
-const PORT = 3000;
-
-sequelize
-  .sync({ force: false})
-  .then(async () => {
-    const allSnikers = await Product.findAll();
-    if (!allSnikers.length) {
-      loadDatabase();
-    } else {
-      console.log("Database Loaded");
-    }
-    server.listen(PORT, () => {
-      console.log(`Server listening on port ${PORT}`);
-    });
+sequelize.sync({ force: false }).then(
+  server.listen(process.env.PORT || 3000, () => {
+    console.log(`Server listening on port ${process.env.PORT || 3000 }`);
   })
-  .catch((error) => console.error(error));
+);

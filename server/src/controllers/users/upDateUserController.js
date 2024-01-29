@@ -1,4 +1,5 @@
-const { User } = require('../../db');
+const { User, Cart } = require("../../db");
+const nodemailer = require("nodemailer");
 
 const updateUser = async (req, res) => {
     const { idKey } = req.params;
