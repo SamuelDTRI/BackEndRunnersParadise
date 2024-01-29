@@ -49,9 +49,25 @@ module.exports = (sequelize) => {
       },
 
       profilePicture: {
-        type: DataTypes.BLOB,
+        type: DataTypes.STRING,
         allowNull: true,
       },
+
+      rol: {
+        type: DataTypes.ENUM("admin", "seller", "buyer"),
+        allowNull: false,
+        defaultValue: "buyer", 
+      },
+      
+      compras:{
+        type: DataTypes.ARRAY(DataTypes.JSON),
+        allowNull: true,
+      },
+
+      paymentMethods:{
+        type: DataTypes.ARRAY(DataTypes.JSON),
+        allowNull: true,
+      }
      
 
     },

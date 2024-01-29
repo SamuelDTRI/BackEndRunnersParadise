@@ -8,6 +8,7 @@ const fileUpload = require ("express-fileupload")
 
 const server = express();
 
+
 server.use(bodyParser.json());
 server.use(morgan("dev"));
 server.use(express.json());
