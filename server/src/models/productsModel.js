@@ -9,16 +9,13 @@ module.exports = (sequelize) => {
         autoIncrement: true,
         primaryKey: true,
       },
+      
       name: {
         type: DataTypes.STRING,
         unique: true,
         allowNull: false,
       },
-      id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
-        primaryKey: true,
-      },
+
       brand: {
         type: DataTypes.ENUM('ADIDAS', 'NIKE', 'NEWBALANCE'),
         allowNull: false,
