@@ -64,7 +64,6 @@ module.exports = (sequelize) => {
         type: DataTypes.ARRAY(DataTypes.JSON),
         allowNull: true,
       }
-     
 
     },
     { timestamps: false, freezeTableName: true }
