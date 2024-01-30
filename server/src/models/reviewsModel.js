@@ -21,7 +21,7 @@ module.exports = (sequelize) => {
       },
       
       productId: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
       },
 
