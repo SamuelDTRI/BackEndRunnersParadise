@@ -9,6 +9,7 @@ const getUserById = async (idKey) => {
       surName: response.surName,
       email: response.email,
       password: response.password,
+      rol: response.rol
     };
     console.log("op");
     return result;
