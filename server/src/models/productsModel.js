@@ -20,18 +20,22 @@ module.exports = (sequelize) => {
         type: DataTypes.ENUM('ADIDAS', 'NIKE', 'NEWBALANCE'),
         allowNull: false,
       },
+
       price: {
         type: DataTypes.DOUBLE,
         allowNull: false,
       },
+
       colors: {
         type: DataTypes.ARRAY(DataTypes.STRING),
         allowNull: false,
       },
+
       size: {
         type: DataTypes.ARRAY(DataTypes.DECIMAL),
         allowNull: false,
       },
+      
       image: {
         type: DataTypes.JSONB, 
         allowNull: false,

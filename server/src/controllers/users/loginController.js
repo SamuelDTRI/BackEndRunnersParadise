@@ -39,7 +39,8 @@ const login = async (req, res) => {
       phone: user.phone,
       address: user.address,
       country: user.country,
-      profilePicture: user.profilePicture
+      profilePicture: user.profilePicture,
+      rol: user.rol
     };
 
     return res.json(response);
