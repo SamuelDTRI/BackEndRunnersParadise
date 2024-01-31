@@ -4,27 +4,34 @@ const postReviews = async (req, res) => {
   try {
     // Extraer datos de la URL y el cuerpo de la solicitud
     const { idKey } = req.params;
-    const { content, rating, name, surName, profileImage } = req.body;
-    console.log("esto viene de controlleer reviews", idKey, content, rating, profileImage)
+    const { content, rating, name, profileImage } = req.body;
+    console.log(
+      "esto viene de controlleer reviews",
+      idKey,
+      content,
+      rating,
+      profileImage
+    );
 
     // Verifica que los datos necesarios estén presentes
-    if (!idKey || !content || !rating || !name || !surName || !profileImage ) {
-      return res.status(400).json({ error: 'Todos los campos son obligatorios.' });
+    if (!idKey || !content || !rating || !name || !profileImage) {
+      return res
+        .status(400)
+        .json({ error: "Todos los campos son obligatorios." });
     }
 
     const review = await Review.create({
       content,
       rating,
       name,
-      surName,
       profileImage,
-      productId: idKey
+      productId: idKey,
     });
 
     res.status(201).json({ success: true, review });
   } catch (error) {
-    console.error('Error al procesar la revisión:', error);
-    res.status(500).json({ error: 'Error interno del servidor.' });
+    console.error("Error al procesar la revisión:", error);
+    res.status(500).json({ error: "Error interno del servidor." });
   }
 };
 
