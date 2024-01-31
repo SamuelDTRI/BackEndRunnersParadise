@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
-  sequelize.define(
+  const CartItem = sequelize.define(
     "CartItem",
     {
       id: {
@@ -37,4 +37,6 @@ module.exports = (sequelize) => {
     },
     { timestamps: false, freezeTableName: true }
   );
+
+  return CartItem;
 };

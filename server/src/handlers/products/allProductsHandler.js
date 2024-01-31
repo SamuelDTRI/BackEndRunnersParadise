@@ -33,7 +33,7 @@ const allProductsHandler = async (req, res) => {
       totalSneaker: response.length,
     });
   } catch (error) {
-    res.status(404).send("Failed to find all users, check your request again ...");
+    res.status(404).send(" Not Found Products");
   }
 };
 

@@ -3,12 +3,14 @@ const productsRouter = require("./productsRouter");
 const reviewsRouter = require("./reviewsRouter");
 const usersRouter = require("./usersRouter");
 const cartRouter = require("./cartRouter");
+const paymentRoute = require("./paymentRoute");
 
 const mainRouter = Router();
 
 mainRouter.use("/products", productsRouter);
 mainRouter.use("/reviews", reviewsRouter);
 mainRouter.use("/users", usersRouter);
+mainRouter.use("/payment", paymentRoute);
 mainRouter.use("/cart", cartRouter);
 
 module.exports = mainRouter;

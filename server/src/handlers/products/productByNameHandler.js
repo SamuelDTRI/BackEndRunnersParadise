@@ -11,16 +11,25 @@ const getProductByNameHandler = async (req, res) => {
 
     const productsFound = await getProductByName(name);
 
-    if (productsFound.length > 0) {
+    if (price) {
+      productsFound.sort((a, b) => (price === 'min') ? a.price - b.price : b.price - a.price);
+    }
+    
+    const startIndex = (setCurrentPage - 1) * pageSize;
+    const endIndex = startIndex + parseInt(pageSize, 10);
+    const paginatedResponse = productsFound?.slice(startIndex, endIndex);
+  
+    if (paginatedResponse) {
       return res.status(200).json({
-        productsFound :productsFound ,
+        paginatedResponse ,
+        setCurrentPage,
         totalSneakers : productsFound.length
       });
     } else {
       return res.status(404).json({ message: "Product not found" });
     }
   } catch (error) {
-    return res.status(404).send(`Product with name not found: ${this.name}`);
+    return res.status(500).json({ error: error.message });
   }
 };
 

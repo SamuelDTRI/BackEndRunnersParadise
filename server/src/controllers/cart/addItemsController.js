@@ -1,15 +1,7 @@
 const { Cart, CartItem, Product } = require("../../db");
 const { Op } = require("sequelize");
 
-const addItemsController = async (
-  userId,
-  productId,
-  quantity,
-  name,
-  price,
-  colors,
-  size
-) => {
+const addItemsController = async (userId, productId, quantity,name,price,colors,size) => {
   const cart = await Cart.findOne({ where: { userId } });
   const product = await Product.findOne({ where: { id: productId } });
   console.log("Product Object:", product);
@@ -38,17 +30,17 @@ const addItemsController = async (
   }
 
   const cartItem = await CartItem.create({
-    name: product.name,
-    quantity: quantity,
-    price: product.price * quantity,
-    colors: colors,
-    size: size,
+    name :product.name,
+    quantity:quantity,
+    price : product.price * quantity,
+    colors : colors,
+    size : size,
     deleted: false,
     cartId: cart.id,
     productId: product.id,
   });
 
-  console.log(cartItem);
+  console.log(cartItem)
 
   return cartItem;
 };

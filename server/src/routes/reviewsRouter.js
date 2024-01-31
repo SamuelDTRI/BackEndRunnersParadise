@@ -1,5 +1,7 @@
 const getAllReviews = require("../controllers/reviews/getAllReviews");
 const reviewsController = require("../controllers/reviews/reviewsController");
+const getAllReviews = require("../controllers/reviews/getAllReviews");
+const reviewsController = require("../controllers/reviews/reviewsController");
 const { Router } = require("express");
 
 const reviewsRouter = Router();

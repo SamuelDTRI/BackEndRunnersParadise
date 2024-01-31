@@ -1,5 +1,6 @@
 const { User, Cart } = require("../../db");
 const nodemailer = require("nodemailer");
+const { v4: uuidv4 } = require('uuid');
 
 const postUser = async (name, surName, email, password, rol) => {
   try {

@@ -54,7 +54,7 @@ module.exports = (sequelize) => {
         allowNull: false,
         defaultValue: "buyer", 
       },
-      
+
       compras:{
         type: DataTypes.ARRAY(DataTypes.JSON),
         allowNull: true,
