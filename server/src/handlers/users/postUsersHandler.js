@@ -1,9 +1,9 @@
 const {postUser} = require("../../controllers/users/postUsersDb")
 const postUsersHandler = async (req, res) => {
-    const { name, surName, email, password } = req.body;
+    const { name, surName, email, password , admin } = req.body;
     try {
       console.log("Handling user creation:", req.body);
-      const response = await postUser(name, surName, email, password);
+      const response = await postUser(name, surName, email, password,admin);
       res.status(201).json(response);
     } catch (error) {
       console.error("Error handling user creation:", error);

@@ -4,7 +4,8 @@ const productsModel = require("./models/productsModel");
 const reviewsModel = require("./models/reviewsModel");
 const usersModel = require("./models/usersModel");
 const cartModel = require("./models/cartModel"); 
-const cartItemsModel = require("./models/cartItemsModel"); 
+const cartItemsModel = require("./models/cartItemsModel");
+const recordModel = require ("./models/recordModel")
 const { Sequelize } = require("sequelize");
 
 let sequelize =
@@ -40,8 +41,9 @@ reviewsModel(sequelize);
 usersModel(sequelize);
 cartModel(sequelize); 
 cartItemsModel(sequelize); 
+recordModel(sequelize)
 
-const { Review, Product, User, Cart, CartItem } = sequelize.models; 
+const { Review, Product, User, Cart, CartItem, Record } = sequelize.models; 
 
 Product.hasMany(Review, { foreignKey: "productId", as: "review" });
 Review.belongsTo(Product, { foreignKey: "productId", as: "review" });
@@ -58,4 +60,7 @@ CartItem.belongsTo(Cart, { foreignKey: "cartId" });
 Product.hasMany(CartItem, { foreignKey: "productId" }); 
 CartItem.belongsTo(Product, { foreignKey: "productId" }); 
 
-module.exports = { sequelize, Product, Review, User, Cart, CartItem }; 
+// User.hasOne(Record, { foreignKey: "userId" }); 
+// Record.belongsTo(User, { foreignKey: "userId" }); 
+
+module.exports = { sequelize, Product, Review, User, Cart, CartItem ,Record}; 

@@ -5,11 +5,12 @@ module.exports = (sequelize) => {
     "User",
     {
       id: {
-        type: DataTypes.STRING,
-        defaultValue: DataTypes.UUIDV4, 
+        type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
+        autoIncrement: true,
       },
+
       name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -27,6 +28,43 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+
+      country : {
+        type: DataTypes.STRING,
+        allowNull: true
+      },
+
+      phone : {
+        type: DataTypes.STRING,
+        allowNull: true
+      },
+
+      address : {
+        type: DataTypes.STRING,
+        allowNull: true
+      },
+
+      profilePicture: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+
+      rol: {
+        type: DataTypes.ENUM("admin", "seller", "buyer"),
+        allowNull: false,
+        defaultValue: "buyer", 
+      },
+
+      compras:{
+        type: DataTypes.ARRAY(DataTypes.JSON),
+        allowNull: true,
+      },
+
+      paymentMethods:{
+        type: DataTypes.ARRAY(DataTypes.JSON),
+        allowNull: true,
+      }
+
     },
     { timestamps: false, freezeTableName: true }
   );
