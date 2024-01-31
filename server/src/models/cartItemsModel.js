@@ -20,20 +20,24 @@ module.exports = (sequelize) => {
       },
       name: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
       },
       price: {
         type: DataTypes.DOUBLE,
-        allowNull: false
+        allowNull: false,
       },
       size: {
         type: DataTypes.ARRAY(DataTypes.STRING),
-        allowNull: false
+        allowNull: false,
       },
       colors: {
         type: DataTypes.ARRAY(DataTypes.STRING),
-        allowNull: false
-      }
+        allowNull: false,
+      },
+      idUser: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
     },
     { timestamps: false, freezeTableName: true }
   );

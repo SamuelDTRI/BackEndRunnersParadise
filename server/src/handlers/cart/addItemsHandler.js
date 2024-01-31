@@ -2,7 +2,7 @@ const addItemsController = require("../../controllers/cart/addItemsController");
 
 const addItemsHandler = async (req, res) => {
   const { userId, productId } = req.params;
-  const { name, price, colors, size, quantity } = req.body;
+  const { name, price, colors, size, quantity, idUser } = req.body;
   console.log("userId:", userId);
   console.log("productId:", productId);
   console.log("name:", name);
@@ -18,7 +18,8 @@ const addItemsHandler = async (req, res) => {
       name,
       price,
       colors,
-      size
+      size,
+      idUser
     );
     console.log(
       "añadiendo items con estos datos:",
@@ -28,7 +29,8 @@ const addItemsHandler = async (req, res) => {
       price,
       colors,
       size,
-      quantity
+      quantity,
+      idUser
     );
     res.status(200).json(response);
   } catch (error) {
