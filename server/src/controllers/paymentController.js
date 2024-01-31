@@ -19,11 +19,11 @@ const createOrder = async (req,res) => {
             }
         ],
         back_urls : {
-            success: "https://7117-190-67-196-176.ngrok-free.app/payment/success",
+            success: "https://7eee-190-67-196-176.ngrok-free.app/payment/success",
             failure: "http://localhost:3000/payment/pending",
-            pending: " https://7117-190-67-196-176.ngrok-free.app/"
+            pending: "https://7eee-190-67-196-176.ngrok-free.app /"
         },
-        Notification_url :`https://76d7-190-67-196-176.ngrok-free.app/payment/webhook/${idKey}`,
+        Notification_url :`https://7eee-190-67-196-176.ngrok-free.app/payment/webhook/${idKey}`,
     }
 
     const preference = new Preference(client);
@@ -42,7 +42,8 @@ const createOrder = async (req,res) => {
 
 const receiveWebhooks = async (req,res) => {
     const {idKey} = req.params;
-    const payment = req.query
+    const payment = req.query;
+    const idKeyString = idKey.toString();
     try{
     console.log( "este es el payment," ,payment);
     console.log( "esta es el id", idKey);
@@ -57,9 +58,10 @@ const receiveWebhooks = async (req,res) => {
             {compras: Sequelize.literal( `"compras" || ARRAY['${JSON.stringify(mercadoPagoResponse.data)}']::json[]`) },
             { where: { id: response.id } }
           ); 
-
-          if(mercadoPagoResponse.status === "approved"){
-            const remove = await CartItem.destroy({ where: { cartId: idKey } })
+            console.log("este es mercado status",mercadoPagoResponse.data.status)
+          if(mercadoPagoResponse.data.status === "approved"){
+            const remove = await CartItem.destroy({ where: { idUser: idKeyString } })
+            console.log("eliminando",remove)
           }
           console.log(mercadoPagoResponse)
         console.log("prueba depues", payment)

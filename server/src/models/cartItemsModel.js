@@ -33,6 +33,10 @@ module.exports = (sequelize) => {
       colors: {
         type: DataTypes.ARRAY(DataTypes.STRING),
         allowNull: false
+      },
+      idUser: {
+        type: DataTypes.STRING,
+        allowNull: false
       }
     },
     { timestamps: false, freezeTableName: true }
