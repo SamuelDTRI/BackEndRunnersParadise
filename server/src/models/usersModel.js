@@ -50,7 +50,7 @@ module.exports = (sequelize) => {
       },
 
       rol: {
-        type: DataTypes.ENUM("admin", "seller", "buyer"),
+        type: DataTypes.ENUM("admin", "buyer"),
         allowNull: false,
         defaultValue: "buyer", 
       },

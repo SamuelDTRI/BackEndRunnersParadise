@@ -39,9 +39,11 @@ const login = async (req, res) => {
       phone: user.phone,
       address: user.address,
       country: user.country,
-      profilePicture: user.profilePicture
+      profilePicture: user.profilePicture,
+      paymentMethods: user.paymentMethods || null,
     };
 
+    
     return res.json(response);
   } catch (error) {
     console.error(error);

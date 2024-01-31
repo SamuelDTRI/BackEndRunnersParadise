@@ -16,7 +16,7 @@ const postUser = async (name, surName, email, password, rol) => {
 
     const cart = await Cart.create({ userId: user.id });
 
-    await sendEmail(name, surName, email);
+    await sendWelcomeEmail(name, surName, email);
 
     return user;
   } catch (error) {
@@ -25,7 +25,7 @@ const postUser = async (name, surName, email, password, rol) => {
   }
 };
 
-const sendEmail = async (name, surName, email) => {
+const sendWelcomeEmail = async (name, surName, email) => {
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587,
@@ -54,9 +54,9 @@ const sendEmail = async (name, surName, email) => {
     };
 
     const info = await transporter.sendMail(message);
-    console.log("Correo electrónico enviado:", info);
+    console.log("Correo electrónico de bienvenida enviado:", info);
   } catch (error) {
-    console.error("Error al enviar el correo electrónico:", error);
+    console.error("Error al enviar el correo electrónico de bienvenida:", error);
     throw error;
   } finally {
     transporter.close();
