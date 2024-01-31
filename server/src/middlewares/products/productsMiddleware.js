@@ -1,7 +1,7 @@
 const validateProducts = (req, res, next) => {
   const { name, size, brand, price, colors, image } = req.body;
 
-  const nameRegex = /^[a-zA-Z0-9 ]{5,18}$/; //  letras numeros y espacios entre 5 a 18
+  const nameRegex = /^[a-zA-Z0-9 ]{5,30}$/; //  letras numeros y espacios entre 5 a 18
   const priceRegex = /^\d{1,4}$/; //  numeros con hasta dos decimales
   const brandRegex = /^(nike|adidas|newbalance)$/; //  numeros con hasta dos decimales
   const colorRegex = /^[a-zA-Z]{3,10}$/; //  letras con tamaño de 3 a 10
