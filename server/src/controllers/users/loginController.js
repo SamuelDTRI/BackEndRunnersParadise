@@ -38,7 +38,6 @@ const login = async (req, res) => {
       phone: user.phone,
       address: user.address,
       country: user.country,
-      rol: user.rol,
       profilePicture: user.profilePicture,
       paymentMethods: user.paymentMethods || null,
       rol: user.rol,
