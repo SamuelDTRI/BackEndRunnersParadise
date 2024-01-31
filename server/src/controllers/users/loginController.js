@@ -41,6 +41,7 @@ const login = async (req, res) => {
       rol: user.rol,
       profilePicture: user.profilePicture,
       paymentMethods: user.paymentMethods || null,
+      rol: user.rol,
     };
 
     
