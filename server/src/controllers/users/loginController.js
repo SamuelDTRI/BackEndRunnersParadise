@@ -19,7 +19,8 @@ const { User } = require('../../db');
       id:user.id,
       name:user.name,
       surName:user.surName,
-      email:user.email
+      email:user.email,
+      rol : user.rol
    }
    return res.json(response);
  }
