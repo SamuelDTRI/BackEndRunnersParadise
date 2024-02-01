@@ -5,8 +5,12 @@ const { Router } = require("express");
 
 const reviewsRouter = Router();
 
+// Ruta para manejar todas las revisiones
 reviewsRouter.post("/products/detail/:idKey", reviewsController.postReviews);
+
 reviewsRouter.get("/", getAllReviews);
+
+// Ruta para obtener revisiones específicas de un producto
 reviewsRouter.get("/products/:idKey", reviewsController.getReviewsByProduct);
 reviewsRouter.get("/reviews/:reviewId", reviewsController.getReviewById)
 reviewsRouter.delete("/delete/:productId/:reviewId", reviewsController.deleteReviews);
