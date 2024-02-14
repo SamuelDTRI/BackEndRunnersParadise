@@ -34,6 +34,10 @@ module.exports = (sequelize) => {
         type: DataTypes.JSONB,
         allowNull: false,
       },
+      description: {
+        type: DataTypes.TEXT, 
+        allowNull: true,
+      },
     },
     { timestamps: false, freezeTableName: true }
   );
